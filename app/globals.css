@@ -1,8 +1,39 @@
 @import "tailwindcss";
+
+/* 1. Base Font Configuration */
 body {
   font-family: var(--font-montserrat), sans-serif;
+  /* Enables smooth transition for programmatic scrolling */
+  scroll-behavior: smooth; 
 }
 
 h1, h2, h3, .display {
   font-family: var(--font-anton), sans-serif;
+}
+
+/* 2. Custom Scrollbar Styling (Chrome, Edge, Safari) */
+/* The track is the background, the thumb is the moving part */
+::-webkit-scrollbar {
+  width: 8px; /* Vertical scrollbar width */
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f5; /* Subtle zinc-100 background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8; /* Zinc-300 - inactive color */
+  border-radius: 4px; /* Matches your rounded components */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a6811d; /* Your brand gold on hover */
+}
+
+/* 3. Custom Scrollbar Styling (Firefox) */
+html {
+  /* 'thin' makes the scrollbar narrower, and the color matches the zinc-300 */
+  scrollbar-width: thin;
+  scrollbar-color: #d4d4d8 #f4f4f5;
 }

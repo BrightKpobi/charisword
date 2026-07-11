@@ -1,7 +1,10 @@
-import React from 'react'
-
+import PartnershipHero from './_components/PartnershipHero'
+import ArmsOfPartnership from './_components/ArmsofPartnership'
 export default function PartnershipPage() {
   return (
-    <div>PartnershipPage</div>
+    <div>
+      <PartnershipHero />
+      <ArmsOfPartnership />
+    </div>
   )
 }
