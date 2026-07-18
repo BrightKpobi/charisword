@@ -28,7 +28,6 @@ const MEGA_SECTIONS = [
     title: "Resources",
     links: [{ label: "Sermons Library", href: "/sermons" }],
   },
- 
   {
     title: "Our Events",
     links: [
@@ -80,12 +79,13 @@ export default function MegaNavbar() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 lg:top-4 lg:mx-auto lg:w-[92%] lg:max-w-5xl lg:px-0">
-      <header className="w-full bg-black/80 text-white shadow-2xl backdrop-blur-md transition-all duration-500 ease-in-out lg:rounded-2xl lg:overflow-hidden">
-        
+      {/* Changed lg:rounded-2xl to lg:rounded-sm here */}
+      <header className="w-full bg-black/80 text-white shadow-2xl backdrop-blur-md transition-all duration-500 ease-in-out lg:rounded-sm lg:overflow-hidden">
+
         {/* Top Header Bar */}
         <div className="px-6 py-3.5 lg:px-8 relative z-50 bg-black/10">
           <div className="flex items-center justify-between gap-4">
-            
+
             {/* Free-standing Logo */}
             <Link href="/" className="group flex items-center transition-transform duration-300 hover:scale-105" aria-label="Home">
               <Image
@@ -99,15 +99,20 @@ export default function MegaNavbar() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav aria-label="Primary Links" className="hidden lg:block">
+            <nav
+              aria-label="Primary Links"
+              className={`hidden lg:block transition-all duration-500 ease-in-out ${open
+                  ? "opacity-0 -translate-y-4 pointer-events-none"
+                  : "opacity-100 translate-y-0 pointer-events-auto"
+                }`}
+            >
               <ul className="flex items-center gap-6">
                 {PRIMARY_LINKS.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className={`relative text-[11px] font-semibold uppercase tracking-widest transition-all duration-300 hover:text-[#C9A227] ${
-                        pathname === link.href ? "text-[#C9A227]" : "text-zinc-400"
-                      }`}
+                      className={`relative text-[11px] font-semibold uppercase tracking-widest transition-all duration-300 hover:text-[#C9A227] ${pathname === link.href ? "text-[#C9A227]" : "text-zinc-400"
+                        }`}
                     >
                       {link.label}
                     </Link>
@@ -138,16 +143,15 @@ export default function MegaNavbar() {
           id="mega-expansion-panel"
           className={`fixed inset-x-0 top-[64px] h-[calc(100vh-64px)] overflow-y-auto bg-zinc-950/95 transition-all duration-500 ease-in-out pb-12
             lg:static lg:h-auto lg:w-full lg:bg-zinc-950/60 lg:pb-0 lg:overflow-hidden lg:grid
-            ${
-              open 
-                ? "opacity-100 translate-y-0 pointer-events-auto lg:grid-rows-[1fr]" 
-                : "opacity-0 -translate-y-4 pointer-events-none lg:grid-rows-[0fr] lg:translate-y-0"
+            ${open
+              ? "opacity-100 translate-y-0 pointer-events-auto lg:grid-rows-[1fr]"
+              : "opacity-0 -translate-y-4 pointer-events-none lg:grid-rows-[0fr] lg:translate-y-0"
             }`}
         >
           <div className="overflow-hidden">
             <div className="px-6 py-10 lg:px-8">
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-[200px_1fr]">
-                
+
                 {/* Quick Navigation */}
                 <div className="flex flex-col space-y-3">
                   <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-zinc-500">
@@ -158,9 +162,8 @@ export default function MegaNavbar() {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className={`group inline-flex items-center gap-2 font-[family-name:var(--font-anton)] text-lg uppercase tracking-wide transition-colors hover:text-[#C9A227] ${
-                            pathname === link.href ? "text-[#C9A227]" : "text-zinc-300"
-                          }`}
+                          className={`group inline-flex items-center gap-2 font-[family-name:var(--font-anton)] text-lg uppercase tracking-wide transition-colors hover:text-[#C9A227] ${pathname === link.href ? "text-[#C9A227]" : "text-zinc-300"
+                            }`}
                         >
                           <span>{link.label}</span>
                           <ArrowUpRight
@@ -180,7 +183,7 @@ export default function MegaNavbar() {
 
                     return (
                       <div key={section.title} className="flex flex-col border-b border-zinc-900 pb-4 lg:border-0 lg:pb-0 lg:space-y-3">
-                        
+
                         <button
                           type="button"
                           onClick={() => setActiveAccordion(isAccordionOpen ? null : section.title)}
@@ -189,19 +192,17 @@ export default function MegaNavbar() {
                           <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-zinc-500">
                             {section.title}
                           </p>
-                          <ChevronDown 
-                            size={14} 
-                            className={`text-zinc-500 transition-transform duration-300 lg:hidden ${
-                              isAccordionOpen ? "rotate-180" : ""
-                            }`}
+                          <ChevronDown
+                            size={14}
+                            className={`text-zinc-500 transition-transform duration-300 lg:hidden ${isAccordionOpen ? "rotate-180" : ""
+                              }`}
                           />
                         </button>
 
                         {/* Content Container Area */}
                         <div
-                          className={`grid transition-all duration-300 ease-in-out lg:grid-rows-[1fr] lg:opacity-100 lg:mt-2 ${
-                            isAccordionOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0 lg:opacity-100 pointer-events-none lg:pointer-events-auto"
-                          }`}
+                          className={`grid transition-all duration-300 ease-in-out lg:grid-rows-[1fr] lg:opacity-100 lg:mt-2 ${isAccordionOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0 lg:opacity-100 pointer-events-none lg:pointer-events-auto"
+                            }`}
                         >
                           <div className="overflow-hidden">
                             <ul className="space-y-2">
@@ -209,9 +210,8 @@ export default function MegaNavbar() {
                                 <li key={link.href}>
                                   <Link
                                     href={link.href}
-                                    className={`inline-block text-xs transition-colors hover:text-[#C9A227] ${
-                                      pathname === link.href ? "text-[#C9A227]" : "text-zinc-400"
-                                    }`}
+                                    className={`inline-block text-xs transition-colors hover:text-[#C9A227] ${pathname === link.href ? "text-[#C9A227]" : "text-zinc-400"
+                                      }`}
                                   >
                                     {link.label}
                                   </Link>

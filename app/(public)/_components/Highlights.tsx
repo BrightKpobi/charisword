@@ -16,31 +16,31 @@ import Link from "next/link";
 const CARDS = [
   {
     title: "Our Ministries",
-    href: "https://www.charisword.org/ministries",
-    image: "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg",
+    href: "ministries",
+    image: "/img/apostle-about.jpg",
   },
   {
     title: "Sermons",
-    href: "https://www.charisword.org/sermons",
-    image: "https://images.pexels.com/photos/3756345/pexels-photo-3756345.jpeg",
+    href: "sermons",
+    image: "/img/tess.jpg",
   },
   {
     title: "Testimonies",
-    href: "https://www.charisword.org/testimonies",
-    image: "https://images.pexels.com/photos/7005049/pexels-photo-7005049.jpeg",
+    href: "testimonies",
+    image: "/img/testy.webp",
   },
 ];
 
 export default function Highlights() {
   return (
-    <section className="bg-white text-zinc-900 border-t border-zinc-100">
+    <section className="bg-white text-zinc-900 ">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
-        
+
         {/* Top Section: Title Left, Mandate Description Right */}
         <div className="grid grid-cols-1 gap-6 pb-16 lg:grid-cols-2 lg:gap-20 items-end">
           {/* Left Column - Heading */}
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[#A6811D] font-semibold">
+            <p className="text-xs uppercase tracking-[0.3em] text-orange-500 font-bold">
               To every ethnos
             </p>
             <h2 className="mt-4 font-[family-name:var(--font-anton)] text-3xl uppercase leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl text-zinc-900">
@@ -59,10 +59,10 @@ export default function Highlights() {
         {/* Bottom Section: 3-Column Grid with Taller Profile Cards */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {CARDS.map((card) => (
-            <Link 
-              key={card.title} 
+            <Link
+              key={card.title}
               href={card.href}
-              className="group relative block overflow-hidden bg-zinc-900 aspect-[3/4] rounded-none"
+              className="group relative block overflow-hidden bg-zinc-800 aspect-[3/4] rounded-none"
             >
               {/* Card Image Background */}
               <Image
@@ -78,7 +78,7 @@ export default function Highlights() {
 
               {/* Top Area: Header Layout */}
               <div className="absolute top-0 left-0 right-0 p-6 select-none">
-                <h3 className="font-[family-name:var(--font-anton)] text-2xl uppercase tracking-wide text-white drop-shadow-sm group-hover:text-[#C9A227] transition-colors">
+                <h3 className="font-[family-name:var(--font-anton)] text-2xl uppercase tracking-wide text-white ">
                   {card.title}
                 </h3>
               </div>

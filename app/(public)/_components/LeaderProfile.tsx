@@ -15,7 +15,7 @@ import Link from "next/link";
 
 export default function LeaderProfile() {
   return (
-    <section className="bg-black text-zinc-100 border-t border-zinc-900 w-full overflow-hidden">
+    <section className="bg-black text-zinc-100  w-full overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         
         {/* Left Layout Column: Portrait Shot (Spans 5 Columns on Desktop) */}
@@ -37,7 +37,7 @@ export default function LeaderProfile() {
         <div className="md:col-span-7 flex flex-col items-center text-center px-4 md:px-8 lg:px-16">
           
           {/* Small Gold Kicker */}
-          <span className="text-xs uppercase tracking-[0.3em] text-[#C9A227] font-semibold mb-4">
+          <span className="text-xs uppercase tracking-[0.3em] text-orange-500 font-bold mb-4">
             Our Lead Pastor
           </span>
 

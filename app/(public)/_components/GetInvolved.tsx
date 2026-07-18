@@ -11,14 +11,14 @@
 
 export default function GetInvolved() {
   return (
-    <section className="bg-black text-zinc-100 border-t border-zinc-900">
+    <section className="bg-black text-zinc-100">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
         
         {/* Top Section: Title Left, Opening Devotional Copy Right */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-20 items-start">
           {/* Left Column - Heading */}
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[#C9A227] font-semibold">
+            <p className="text-xs uppercase tracking-[0.3em] text-orange-500 font-bold">
               Unconditional Grace
             </p>
             <h2 className="mt-4 font-[family-name:var(--font-anton)] text-3xl uppercase leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl text-zinc-100">

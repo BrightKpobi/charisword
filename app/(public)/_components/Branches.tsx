@@ -54,14 +54,14 @@ const BRANCHES = [
 
 export default function Branches() {
   return (
-    <section className="bg-black text-zinc-100 border-t border-zinc-900">
+    <section className="bg-black text-zinc-100 ">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
         
         {/* Top Section: Title Left, Description Right */}
         <div className="grid grid-cols-1 gap-6 pb-16 lg:grid-cols-2 lg:gap-20 items-end">
           {/* Left Column - Heading */}
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[#C9A227] font-semibold">
+            <p className="text-xs uppercase tracking-[0.3em] text-orange-500 font-bold">
               Global Fellowships
             </p>
             <h2 className="mt-4 font-[family-name:var(--font-anton)] text-3xl uppercase leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl text-zinc-100">
@@ -99,7 +99,7 @@ export default function Branches() {
 
               {/* Top Area: Location Header */}
               <div className="absolute top-0 left-0 right-0 p-4 select-none">
-                <h3 className="font-[family-name:var(--font-anton)] text-lg uppercase tracking-wide text-zinc-100 group-hover:text-[#C9A227] transition-colors">
+                <h3 className="font-[family-name:var(--font-anton)] text-lg uppercase tracking-wide text-zinc-100 ">
                   {branch.city}
                 </h3>
                 <p className="text-[11px] text-zinc-400 tracking-wide mt-0.5">

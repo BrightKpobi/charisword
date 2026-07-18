@@ -19,8 +19,12 @@ export default function HomePage() {
        
       </Stickystack>
        <Highlights /> 
+
+       <Stickystack>
         <Branches />      
        <GetInvolved />
+       </Stickystack>
+       
       <AgeMinistries />
       <LeaderProfile />
         <AnnualEvents/>

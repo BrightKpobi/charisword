@@ -30,17 +30,17 @@ const AGE_GROUPS = [
 
 export default function AgeMinistries() {
   return (
-    <section className="bg-white text-zinc-900 border-t border-zinc-100">
+    <section className="bg-white text-zinc-900">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 grid grid-cols-1 gap-12 lg:grid-cols-12 items-center">
         
         {/* Left Layout Column - Title Stack & 2xl Rounded Action Button */}
         <div className="lg:col-span-5 flex flex-col items-start lg:pr-6">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#A6811D] font-bold">
+          <span className="text-xs uppercase tracking-[0.3em] text-orange-500 font-bold">
             Ministries
           </span>
           <h2 className="mt-4 font-[family-name:var(--font-anton)] text-4xl uppercase leading-[0.95] sm:text-5xl md:text-6xl text-zinc-900">
             There&apos;s a place <br />
-            <span className="text-[#A6811D]">for everyone</span>
+            <span className="text-orange-500">for everyone</span>
           </h2>
           
           <Link
@@ -73,7 +73,7 @@ export default function AgeMinistries() {
 
               {/* Text Layout Overlaid on the Card (Pinned to Bottom Left) */}
               <div className="absolute bottom-0 left-0 right-0 p-6 select-none">
-                <h3 className="font-[family-name:var(--font-anton)] text-2xl uppercase tracking-wide text-white group-hover:text-[#C9A227] transition-colors">
+                <h3 className="font-[family-name:var(--font-anton)] text-2xl uppercase tracking-wide text-white ">
                   {group.title}
                 </h3>
                 <p className="mt-1 text-xs font-medium text-zinc-300 tracking-wide">

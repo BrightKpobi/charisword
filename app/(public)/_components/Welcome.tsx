@@ -2,32 +2,24 @@
 
 import Image from "next/image";
 
-/**
- * Welcome
- * -----------------------------------------------------------------------
- * Re-structured layout with clean white background theme:
- * - Row 1: Header (Left) and Description (Right) split columns
- * - Row 2: Sharp, flat, lower-profile landscape image aligned with layout edges
- * -----------------------------------------------------------------------
- */
 
 const MEDIA = {
-  image: "https://images.pexels.com/photos/9577010/pexels-photo-9577010.jpeg",
+  image: "/img/aura-banner.jpg",
 };
 
 export default function Welcome() {
   return (
     <section className="bg-white text-zinc-900">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
-        
+
         {/* Top Section: Split Title & Description */}
         <div className="grid grid-cols-1 gap-6 pb-16 lg:grid-cols-2 lg:gap-20 items-end">
           {/* Left Column - Heading */}
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[#A6811D] font-semibold">
+            <p className="text-xs uppercase tracking-[0.3em] text-orange-500 font-bold">
               Charisword Gospel Ministry
             </p>
-            <h2 className="mt-4 font-[family-name:var(--font-anton)] text-3xl uppercase leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl text-zinc-900">
+            <h2 className="mt-4 font-[family-name:var(--font-anton)] text-3xl uppercase leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl text-zinc-800">
               Welcome to Our Family
             </h2>
           </div>
